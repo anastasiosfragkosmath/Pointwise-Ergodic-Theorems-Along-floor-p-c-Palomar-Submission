@@ -1,0 +1,180 @@
+{
+  "scope": "Current a.e.-only local proof/source/attribution checks and actual Linux sandbox Comparator passed. Registry/editorial and author publication decisions remain external.",
+  "timestamp_utc": "2026-10-31T04:33:38.946813+00:00",
+  "requirements": [
+    {
+      "id": "main_proofs",
+      "status": "passed",
+      "evidence": [
+        {
+          "path": "audits/build.json",
+          "sha256": "fb0887e35adcd46721e650e06c273a4db2ead916658771667f1ba2b53040993d"
+        },
+        {
+          "path": "audits/headline_axioms.json",
+          "sha256": "f0ef034f8544cf3a7b5b7c143d03bd8a31736abe43a32bf60c4792b16b53fef8"
+        }
+      ]
+    },
+    {
+      "id": "source_policy",
+      "status": "passed",
+      "evidence": [
+        {
+          "path": "audits/source_tokens_challenge_allowed.json",
+          "sha256": "c1a65504a4372d1082eeaaa818ae7b946e9909222276c4172c59d74bdf27ee24"
+        },
+        {
+          "path": "audits/challenge_approval_final.json",
+          "sha256": "9ef332e8ade8edc77e2c4e04d1ba8305d660cee2915536548ed75e996c2e673b"
+        }
+      ]
+    },
+    {
+      "id": "source_layout",
+      "status": "passed",
+      "evidence": [
+        {
+          "path": "audits/source_layout.json",
+          "sha256": "fe5344b9e9531db6f5430ba304a9c30cb0b53c545113fa37964b14a1459d4a74"
+        }
+      ]
+    },
+    {
+      "id": "challenge_bounds_and_imports",
+      "status": "passed",
+      "evidence": [
+        {
+          "path": "audits/challenge.json",
+          "sha256": "b71cca5daf9b97c45a22c794bf1de2202a9a6794f685513ca9eb551e9da8ff92"
+        }
+      ]
+    },
+    {
+      "id": "manuscript_semantics",
+      "status": "passed",
+      "evidence": [
+        {
+          "path": "semantic-audit.md",
+          "sha256": "90cc0dce8a75bc632f781b114dd212380c15830239838d9b207236e141d69f54"
+        }
+      ]
+    },
+    {
+      "id": "independent_statement_types",
+      "status": "passed",
+      "evidence": [
+        {
+          "path": "audits/final_statement_comparison.json",
+          "sha256": "519adba716ebab2c97e479be36ba8ca4fcb37275f903d8d69b16c0395a99c661"
+        }
+      ]
+    },
+    {
+      "id": "metadata_provenance",
+      "status": "passed",
+      "evidence": [
+        {
+          "path": "formalization.yaml",
+          "sha256": "d2ca2647d7317557274498f4d1a6a83fa240e0c6f1e6af36af9f4cc49c178063"
+        },
+        {
+          "path": "audits/provenance.json",
+          "sha256": "a80ac2cecf860d549b9c068fd63284ff26492d489851a485f0ad57b8bfd8fa14"
+        },
+        {
+          "path": "audits/final_provenance.json",
+          "sha256": "182c21fdd801b3d3a3389f70e8b41b6ee0cf92f652b600289217f9dfb7c3be86"
+        }
+      ]
+    },
+    {
+      "id": "revised_sandbox_comparator",
+      "status": "passed",
+      "evidence": [
+        {
+          "path": "audits/linux_comparator.json",
+          "sha256": "717bfa239ccfeaf85df7e0e0c4de8fe5c3709d85c873af316c56fa97e89fb58b"
+        }
+      ],
+      "note": "Current a.e.-only snapshot accepted by all three configured kernels; complete log and source/configuration hashes inspected."
+    },
+    {
+      "id": "final_source_only_inventory",
+      "status": "passed",
+      "evidence": [
+        {
+          "path": "audits/palomar_mechanical.json",
+          "sha256": "ed3645ca1840a27e96cf1f24bd1a054f525ea476aa2e0dfd3c873d582b9f28c8"
+        }
+      ]
+    },
+    {
+      "id": "paper_facing_review_module_and_reports",
+      "status": "passed",
+      "evidence": [
+        {
+          "path": "FractionalPrimes/PaperTheorems.lean",
+          "sha256": "64fd035829d9b40b39f6349d8ede8783016f92d8ea04b97e1879770a9eb8155f"
+        },
+        {
+          "path": "verification-report.md",
+          "sha256": "4211dcf0eb53e1a6a56a59e3031cba481c691f4ca601139377e727fefae734a8"
+        },
+        {
+          "path": "semantic-audit.md",
+          "sha256": "90cc0dce8a75bc632f781b114dd212380c15830239838d9b207236e141d69f54"
+        },
+        {
+          "path": "audits/final_revision_checkpoint.json",
+          "sha256": "f2965a521b6a8535c757b80b0c3fce8bbbf757f23729e9935072be1892955fae"
+        }
+      ]
+    },
+    {
+      "id": "source_license_attribution",
+      "status": "passed-for-identified-inventory",
+      "evidence": [
+        {
+          "path": "audits/attribution_checkpoint.json",
+          "sha256": "a74c8fff6a5242e7d4d2d6f3a44f82743dc69bd24ece1984b36cfe6899685d35"
+        },
+        {
+          "path": "audits/attribution_check.json",
+          "sha256": "a16790b3eefa80ca1a1047bd9fd936b420eff58cb500c4a9fcf87987aff6fdc0"
+        },
+        {
+          "path": "audits/attribution.json",
+          "sha256": "c37ec9f07f1a1a4e56ecf0744fde889e8e5512935b6a5c727aaebbff589afaaf"
+        },
+        {
+          "path": "THIRD-PARTY.md",
+          "sha256": "f58a51538fe1cab5e99047046906a57c461122152550a23ef159aabbdcc0595a"
+        },
+        {
+          "path": "NOTICE",
+          "sha256": "3575e0e217d2a3a69d968a374c1c6961d37640042895e8b587eab8b31349f5be"
+        },
+        {
+          "path": "ACKNOWLEDGMENTS.md",
+          "sha256": "a78764b371ad42bed37769ce425b4af4b7bc531815ec3276b3a7868a6dfb34b2"
+        },
+        {
+          "path": "CITATIONS.bib",
+          "sha256": "5dd8fbba4c49f89fe2051edaf0597b49f58db672fd252531b402e161aafc0bb6"
+        }
+      ]
+    },
+    {
+      "id": "lean_build_ci_configuration",
+      "status": "disk-exhausted run; expanded-cleanup retry pending",
+      "evidence": [
+        {
+          "path": ".github/workflows/lean-build.yml",
+          "sha256": "c930d11a1b645778f77b56768be5466cd176d075234b95b3c399a15015f88a4d"
+        }
+      ],
+      "note": "GitHub run 41201099757 for commit 48301206b564e75b09cffcee68292ffeefebf56e failed after approximately 3 hours 36 minutes with error 28 (no space left on device), near 12,970/12,981 jobs. Expanded runner cleanup removes unused Haskell tools, cached development tools and Docker images, retaining swap and system compiler packages. Downloaded Mathlib cache archives are removed after installation. A fresh full lake build is required; no CI pass is claimed."
+    }
+  ]
+}

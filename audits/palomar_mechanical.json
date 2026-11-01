@@ -1,0 +1,9 @@
+{
+  "scope": "Current source-only inventory excluding this report and its referring requirements report.",
+  "files_in_scope": 3990,
+  "bytes_in_scope": 55535858,
+  "lean_files": 3933,
+  "compiled_artifacts_lfs_or_gitmodules": [],
+  "attribution_checkpoint_sha256": "a74c8fff6a5242e7d4d2d6f3a44f82743dc69bd24ece1984b36cfe6899685d35",
+  "registry_acceptance_claimed": false
+}

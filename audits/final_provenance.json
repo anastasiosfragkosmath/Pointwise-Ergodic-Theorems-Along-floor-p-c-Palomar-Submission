@@ -1,0 +1,63 @@
+{
+  "scope": "Added final-manuscript modules built on the preserved, verified baseline source package. The existing provenance.json retains the original bundled third-party provenance.",
+  "parent_archive_sha256": "89be25a95536b4d9c9228e60eb725c19ff2562c8ba0218f49120894601a37ec8",
+  "authoritative_inputs": {
+    "fractionalpowersofprimesfinal.tex": "2527b59d3447619f27c5cf2850ea58943dcc5f610f2cb6cd1231e6b12f8c97b0",
+    "fractionalprimesbib.bib": "34cc9b7466842f018b28a71f59546aa26801078aed7eb643525c58562700d45a"
+  },
+  "new_modules_sha256": {
+    "FractionalPrimes/Final/AlmostSureSummability.lean": "2c511342605839f4b28f3176a8648c03b56f962a35e945e695dfe9254ae28cff",
+    "FractionalPrimes/Final/ArithmeticDecay.lean": "b0869d0dc560e1c63ec1470cf019af3ec5cf008a28be3348035673c215660b71",
+    "FractionalPrimes/Final/ForwardAverageFacts.lean": "dfcab427d16d5472a8f4c82c551839beae4cf14105e8eb932aef840b037839ac",
+    "FractionalPrimes/Final/ForwardMoments.lean": "b4f78b38a1f625fb362914841b74cc3793494e89d32cf3f6af4cf3833b157bb9",
+    "FractionalPrimes/Final/ForwardOperatorNorm.lean": "9935c7f1b7f39f556b6849a5ec150eaacc65910b689de4f635ee4f365998de5f",
+    "FractionalPrimes/Final/ForwardOrbitCutoff.lean": "89a67ef5696c394b4182c39682b6196db1704ca94a963242a2794d2aa32a4799",
+    "FractionalPrimes/Final/ForwardSystems.lean": "20901f4eab06206f747e4868b9426958c7d473afb25fda4782ca616580aa1545",
+    "FractionalPrimes/Final/ForwardTransference.lean": "f1cefaa789875e125685835f2a0138dcf0a9924663fdff94b89849878da25fcb",
+    "FractionalPrimes/Final/ForwardWeightedVariation.lean": "6a9cb4b64e296ee64922b4107d241c5cb4dc4d341debd457059d6406e3f1e664",
+    "FractionalPrimes/Final/HigherPrimePowersVanish.lean": "a5b7cb3fdf1f29c81b4474b7d9305965408c129822f0541d46ada651b1531aa3",
+    "FractionalPrimes/Final/MainTargets.lean": "a3264a4a1941dc71761529c3862f3bcd4d4b0023b1631870d305d6e59363cadc",
+    "FractionalPrimes/Final/MobiusBlockBounds.lean": "d077ac5a6453e2411716e25188f36ac9de29e826776e2f83c97585bb34b1ba8a",
+    "FractionalPrimes/Final/MobiusIncrements.lean": "5fabeed28f352c74b794db1c89a3e74ec9b475af7c66edb72229a283ae563aaf",
+    "FractionalPrimes/Final/MobiusLogDecay.lean": "96d9424e4fa71a2f17190f6346a1523b1843537dfd95f1e29aa74f74ddea86d7",
+    "FractionalPrimes/Final/MobiusLogRate.lean": "03d3baf581ec427708aea1bb1fcc156960f545ea5f02ea313fa81281c6788bf0",
+    "FractionalPrimes/Final/MobiusLongScales.lean": "add8acb0d34812b140e5de843e292e609fb2628a2ac6c64ea06dc395c54adaa6",
+    "FractionalPrimes/Final/MobiusShortBlocks.lean": "1e2bb73440148416e152675598e6e4de5c205985b21fb34b3a69c013a315cfc1",
+    "FractionalPrimes/Final/MobiusSparseScales.lean": "abd15050033dd1b02f40c65a62277d54f47ddfb8fdab28e72bb9ecdcb2ce38fc",
+    "FractionalPrimes/Final/PrimeAverageEnumeration.lean": "3598b87555948e78e8a3cdca5d433e43da022db992aa059f2f230391c069246d",
+    "FractionalPrimes/Final/PrimeConvergence.lean": "a85da7ffa783fecc898ab808c4330973490feda59b66a2e5f0649db3b74986bc",
+    "FractionalPrimes/Final/PrimeLpAbel.lean": "a52d5aa2119857d13fe9304a05c3bd2a26f56e2581196f0721759696db6f0d17",
+    "FractionalPrimes/Final/PrimeLpNormalization.lean": "b357d2f906396d6440e80a75551cef5a82a39b907dd07a8c59e01e271d0632ab",
+    "FractionalPrimes/Final/PrimeOrbitAbel.lean": "998664a6f1895c2b10a205c96e23f3bc48a42d55adfde817032ee46548c0a68c",
+    "FractionalPrimes/Final/PrimePartsDecomposition.lean": "054cf046c55e24ba0eb4a5b444f3088b7f994acdfbf83b0cb1aab6661f9e9e7b",
+    "FractionalPrimes/Final/PrimePointwiseNormalization.lean": "131a120a84ea458172747314932e7ad524ba3a7e9b8179d840435093c5841857",
+    "FractionalPrimes/Final/PrimeVariation.lean": "dc44ac22a5ceafc03cd915cfe560ac9d7f3fa629205b9e8c8c6dd156824f6559",
+    "FractionalPrimes/Final/WeightedConvergence.lean": "25e3d3549156b6e8323a903f81b6cb11e4af9ce26e299518c87e6921abb59b6c",
+    "FractionalPrimes/Final/WeightedLpAverages.lean": "02659327a76dcaadc0c6d0b04499f9dd47572cb4021afaa67a32d8cb2249c4d5",
+    "FractionalPrimes/Final/WeightedPrimeCommonLimit.lean": "ef29a0f4953379e80cba163c277ecde0264042682492507599dc6c24807f76c3",
+    "FinalSolution.lean": "cbcc35adb31c565c54a0f32872485a2ab2772884bac22f70ad966e1cbe98b326",
+    "FinalDevelopment.lean": "189876054eb4adaa6549d721673ddcc7b571fabba138ec8e9bf642ee6b3addf8",
+    "FinalChallengeStatements.lean": "13d93973d5706122455b768a12e116a0b6b140f2995073a5dc84d9badb096f45",
+    "FractionalPrimes/PaperTheorems.lean": "64fd035829d9b40b39f6349d8ede8783016f92d8ea04b97e1879770a9eb8155f"
+  },
+  "adapted_paper_specific_modules": [
+    "PrimePartsDecomposition",
+    "HigherPrimePowersVanish",
+    "PrimeOrbitAbel",
+    "PrimeLpAbel",
+    "PrimePointwiseNormalization",
+    "PrimeLpNormalization",
+    "PrimeAverageEnumeration",
+    "WeightedPrimeCommonLimit",
+    "WeightedLpAverages"
+  ],
+  "adaptation": "Reuses the baseline paper-specific proof arguments with forward systems and natural floor times. Generic measure and Lp theory is imported from Mathlib. No manuscript or blueprint correction was applied.",
+  "challenge_approval_sha256": "fc1b7d697a7f50d644d600928b9a8d61b47bff36a54c89f44a5b88d890b0a33a",
+  "submission_kernel_status": "revised Ubuntu sandbox Comparator passed with Con-ron, NanoDa and Lean default kernel",
+  "author_requested_scope_revision": "The submitted prime-convergence conclusions are now a.e.-only; the supplied manuscript text is unchanged, and the repository TeX copies have only been reindented.",
+  "repository_formatted_tex_copies_sha256": {
+    "fractionalpowersofprimesfinal.tex": "db5531145b8df0df7f61bdb341915f339e92e0529e1ce79bf6b768285470e5e3",
+    "source-paper/fractionalpowersofprimesfinal.tex": "db5531145b8df0df7f61bdb341915f339e92e0529e1ce79bf6b768285470e5e3"
+  },
+  "repository_formatting_note": "The two repository TeX copies were reindented using two spaces per nested environment; all non-leading-whitespace content matches the supplied manuscript."
+}

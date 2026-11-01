@@ -1,0 +1,8 @@
+{
+  "scope": "Exactly three statement-only Challenge placeholders for the revised manuscript; no placeholders in Solution or revised proofs.",
+  "authorization": "User explicitly approved in this chat: Yes\u2014allow exactly three Challenge-only placeholders; none in proofs.",
+  "challenge_sha256": "f2b725bc81660109f76c630f38b4327c77c3dde469a93ac09a5c6c8548b5c5f3",
+  "placeholder_count": 3,
+  "previous_challenge_sha256": "f7fb9831afe4a1b32b605037098d9dda7c364c78c35283b8fe19f539f9aecb8d",
+  "statement_scope_revision": "Author explicitly requested a.e.-only prime convergence in this chat on 2026-10-30; the same three previously approved Challenge-only placeholders remain, with no additional placeholders."
+}

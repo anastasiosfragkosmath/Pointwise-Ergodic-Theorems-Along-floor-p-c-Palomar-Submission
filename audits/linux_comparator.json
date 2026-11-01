@@ -1,0 +1,45 @@
+{
+  "scope": "Actual sandboxed Comparator acceptance of the current author-selected a.e.-only statement/proof snapshot in Ubuntu ARM64.",
+  "date": "2026-10-31",
+  "passed": true,
+  "source_archive": "fractional-primes-ae-only-20261030.tar.gz",
+  "source_archive_sha256": "51af466e88fa6113c5b4963a7575595405d2f9af5d6513e9e18c83103e17b2a7",
+  "lean_source_manifest_sha256": "4192a1c99e425f6cbaa683cb60d55a6d64069b22e8d061bfd53651672bc1df9d",
+  "source_count": 3933,
+  "challenge_sha256": "f2b725bc81660109f76c630f38b4327c77c3dde469a93ac09a5c6c8548b5c5f3",
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "theorem_names": [
+    "FractionalPrimes.Final.Palomar.primePowerVariation",
+    "FractionalPrimes.Final.Palomar.primeAverageConvergence",
+    "FractionalPrimes.Final.Palomar.mobiusAverageTendsToZero"
+  ],
+  "pipeline": "bash -o pipefail -c 'bash scripts/verify-comparator.sh 2>&1 | tee comparator-verification-ae-only.log'",
+  "exit_status": 0,
+  "exit_status_evidence": "Author reported immediate echo $? output 0; complete transferred log independently inspected.",
+  "log_sha256": "80f44194ce6e32eba31b39164f7ad6a2827f0208e323b974f9f869f99f24b5d8",
+  "log_bytes": 3177318,
+  "log_lines": 47653,
+  "log_path_local": "not included in repository",
+  "kernel_acceptance": {
+    "con-ron": true,
+    "nanoda": true,
+    "Lean default": true
+  },
+  "con_ron_verified_declarations": 142443,
+  "precheck_build_jobs": 12976,
+  "sandbox_challenge_build_jobs": 2711,
+  "sandbox_solution_build_jobs": 12974,
+  "inspected_error_lines": [],
+  "source_and_configuration_hashes_matched": 3935,
+  "six_transitive_axiom_sets": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "copied_reports": {
+    "audits/linux_headline_axioms.json": "42ae7194d836c497d56f75b4de4823727fe70386b89994dfc84b4a22a3930986",
+    "audits/linux_source_layout.json": "64f110ef6e7ad67dfdace4d69db4c2066da643e78d256ab3cc10400f73edc0b6",
+    "audits/linux_challenge.json": "43d64b174ec6ca74fb021dab3f6f331aa8ca951623d744a11ae2670e3ff243d9"
+  },
+  "limitations": "Certifies the recorded proof/configuration snapshot and three configured theorem pairs, not registry/editorial acceptance. Paper-facing review declarations have separate local build/axiom evidence. Subsequent verification-documentation updates do not change the tested Lean sources or configuration."
+}

@@ -1,0 +1,66 @@
+name: Lean build
+
+'on':
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lean-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: lake build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    env:
+      LEAN_NUM_THREADS: "2"
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+
+      - name: Prepare build space
+        # Remove unused tools only on the disposable hosted runner.
+        uses: jlumbroso/free-disk-space@54081f138730dfa15788a46383842cd2f914a1be
+        with:
+          android: "true"
+          dotnet: "true"
+          haskell: "true"
+          docker-images: "true"
+          tool-cache: "true"
+          large-packages: "false"
+          swap-storage: "false"
+
+      - name: Set up pinned Lean and the Mathlib cache
+        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
+        with:
+          auto-config: "false"
+          build: "false"
+          test: "false"
+          lint: "false"
+          use-mathlib-cache: "true"
+          use-github-cache: "false"
+
+      - name: Remove downloaded cache archives and report build space
+        run: |
+          rm -rf -- "$HOME/.cache/mathlib"
+          df -h .
+
+      - name: Build the formalization
+        run: lake build
+
+      - name: Build paper-facing theorem statements
+        run: lake build FractionalPrimes.PaperTheorems
+
+      - name: Report disk usage
+        if: always()
+        run: |
+          df -h .
+          du -h --max-depth=2 .lake "$HOME/.elan" 2>/dev/null | sort -h | tail -n 30

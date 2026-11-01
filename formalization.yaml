@@ -1,0 +1,125 @@
+version: v0.4
+project:
+  name: Pointwise Ergodic Theorems Along $\lfloor p^c\rfloor$ for Every $c>1$
+  description: >-
+    Lean 4 formalization of the variational estimate, common pointwise limit
+    for von Mangoldt and prime averages, and logarithmic Mobius cancellation
+    in Pointwise Ergodic Theorems Along $\lfloor p^c\rfloor$ for Every $c>1$. The author selected
+    the a.e.-only conclusion for the submitted prime-convergence statement.
+    All results are stated for sigma-finite measure-preserving systems.
+  authors:
+  - Anastasios Fragkos
+  responsible_maintainers:
+  - Anastasios Fragkos
+  license: Apache-2.0
+repository:
+  role: substantive-development
+sources:
+- title: Pointwise Ergodic Theorems Along $\lfloor p^c\rfloor$ for Every $c>1$
+  authors:
+  - Anastasios Fragkos
+  type: paper
+  location: Theorem t:maintheorem, Corollary cor:prime-convergence, Theorem t:mobius-convergence
+  relationship: formalizes
+  note: 'Author-supplied authoritative final manuscript; repository TeX copies have normalized indentation: source-paper/fractionalpowersofprimesfinal.tex;
+    accompanying bibliography source-paper/fractionalprimesbib.bib.'
+  author_endorsement: participated
+classification:
+  arxiv:
+  - math.DS
+  - math.NT
+  msc2020:
+  - 37A30
+  - 37A44
+automation:
+  methods:
+  - method: agent
+    models:
+    - gpt-6.1-sol
+    - gpt-6-luna
+    - gpt-6.1-terra
+    framework: Codex
+    tool_setup: Agent-assisted Lean development and repository preparation under author
+      direction; Lean checks every claimed formal result. These are known material
+      models used in Lean development; exact historical run-by-run model accounting
+      is unavailable.
+  - method: manual
+    framework: Lean 4
+    tool_setup: Author-directed selection of the paper's theorem statements, formalization
+      scope, license, and repository maintainership.
+  notes: Astra was also used for blueprint and source preparation; its exact model
+    version is not recorded here. The author approved exactly three statement-only
+    placeholders in Challenge. Solution proofs must have no placeholders or custom
+    axioms. Agent-suggested proofs count only after Lean checking.
+status:
+  scope: >-
+    The current a.e.-only statements and proofs passed the full local Lean
+    build, nine standard-axiom checks, and actual Ubuntu sandbox Comparator
+    with Con-ron, NanoDa and Lean's default kernel. Exactly three independent
+    Challenge-only placeholders are author-approved. Registry/editorial
+    acceptance is not claimed.
+  sorry_count: 3
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Classical.choice
+  - Quot.sound
+  main_results:
+  - declaration: FractionalPrimes.Final.primePowerVariation
+    file: FractionalPrimes/Final/PrimeVariation.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Classical.choice
+    - Quot.sound
+  - declaration: FractionalPrimes.Final.primeAverageConvergenceWithEnumeration
+    file: FractionalPrimes/Final/PrimeConvergence.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Classical.choice
+    - Quot.sound
+  - declaration: FractionalPrimes.Final.mobiusLogRate
+    file: FractionalPrimes/Final/MobiusLogRate.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Classical.choice
+    - Quot.sound
+review:
+  status: self-assessed
+  reviewers: []
+  notes: >-
+    The complete a.e.-only Ubuntu Comparator log and transferred reports were
+    inspected. All 3933 Lean-source hashes and recorded configuration hashes
+    match the locally checked source package. All three configured kernels
+    accepted; the author reported immediate pipeline exit status zero.
+    See verification-report.md and audits/linux_comparator.json.
+    Registry/editorial review remains external.
+fidelity:
+  divergences: >-
+    Complex observables are explicit. Positive averaging scales start at N=1,
+    and prime normalization starts at N=2. The enumerated-prime averages have
+    the same almost-everywhere limit. At the author's explicit request, the
+    submitted corollary records only its pointwise conclusion. The unchanged
+    supplied paper also states norm convergence. Norm arguments remain as
+    supporting proof infrastructure. The Mobius assertion is the stated
+    logarithmic almost-everywhere decay rate.
+alignment:
+  namespace: FractionalPrimes.Final.Palomar
+  statements:
+  - source: Theorem t:maintheorem
+    lean: FractionalPrimes.Final.Palomar.primePowerVariation
+    module: FinalSolution.lean
+    checked_core: FractionalPrimes.Final.primePowerVariation
+    status: proved-and-axiom-audited; ae-only-linux-sandbox-comparator-passed
+  - source: Corollary cor:prime-convergence
+    lean: FractionalPrimes.Final.Palomar.primeAverageConvergence
+    module: FinalSolution.lean
+    checked_core: FractionalPrimes.Final.primeAverageConvergenceWithEnumeration
+    status: proved-and-axiom-audited; ae-only-linux-sandbox-comparator-passed
+  - source: Theorem t:mobius-convergence
+    lean: FractionalPrimes.Final.Palomar.mobiusAverageTendsToZero
+    module: FinalSolution.lean
+    checked_core: FractionalPrimes.Final.mobiusLogRate
+    status: proved-and-axiom-audited; ae-only-linux-sandbox-comparator-passed

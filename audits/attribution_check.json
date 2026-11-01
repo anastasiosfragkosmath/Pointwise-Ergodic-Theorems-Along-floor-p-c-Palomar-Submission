@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "third_party_lean_files": 2945,
+  "license_and_citation_files": 6,
+  "errors": [],
+  "attribution_record_sha256": "c37ec9f07f1a1a4e56ecf0744fde889e8e5512935b6a5c727aaebbff589afaaf",
+  "checker_sha256": "910ce3a6cbe9b2e78f90e99813cbb801f2ee72e467e20f0a8867cae2640ea64a",
+  "limitation": "Checks the identified inventory and its recorded notices; not legal clearance."
+}

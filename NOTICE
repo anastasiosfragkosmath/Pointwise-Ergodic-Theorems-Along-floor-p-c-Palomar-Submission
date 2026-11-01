@@ -1,0 +1,50 @@
+Pointwise Ergodic Theorems Along $\lfloor p^c\rfloor$ for Every $c>1$ — Lean formalization
+
+Author and responsible maintainer: Anastasios Fragkos.
+This project's code is distributed under Apache License 2.0; see LICENSE.
+Third-party material retains its original copyright, authorship and license.
+
+This is a project-authored consolidated attribution notice. It does not replace
+the original notices retained in individual sources or alter any license.
+
+Bundled or adapted source:
+
+* OpenAI mathematics repository (openai/math), commit
+  adc7f1241b42e322a6451854ab7e4b4c146bf78a, lean/OAI/NumberTheory source closure.
+  Apache-2.0; see third-party-licenses/LICENSE.
+
+* Prime Number Theorem and More (AlexKontorovich/PrimeNumberTheoremAnd), commit
+  c39a751132c88b6e8080b74c74023fd95b3d8be0, four Lean source files.
+  Apache-2.0; see third-party-licenses/PNT-LICENSE. Preferred upstream citation
+  metadata is preserved in third-party-licenses/PNT-CITATION.cff.
+
+* Rellich–Kondrachov (abenenson/rellich-kondrachov), commit
+  70f85d4c1bf99c6e7d61e8be4daa6f3664d08d23, fifteen Lean source files.
+  Apache-2.0; see third-party-licenses/RELLICH-LICENSE.
+
+* lean-spherical (roos-j/lean-spherical), commit
+  f0dde64dcef87118c1d1dc9253e039da8f3f0482, portions adapted in
+  FractionalPrimes/Literature/JSW/SchurKernel.lean and SmoothL1Translation.lean.
+  Copyright (c) 2026 Joris Roos. All rights reserved. Authors: Codex.
+  Original generation disclosures and file notices are retained in the adapters.
+  Apache-2.0; see FractionalPrimes/Literature/JSW/LeanSpherical-LICENSE.txt.
+
+Source preparation also used the recorded vendor snapshot in
+dbsanfte/RiemannGaussian, commit 07968f5ea0bff8caf39973599280e6321211c682.
+Its license is preserved in third-party-licenses/RIEMANN-GAUSSIAN-LICENSE.
+Its unrelated HermitianRankTrace, MontgomeryVaughan and vendor/zeta23 code is
+not distributed in this package. This credit does not replace the underlying
+OpenAI, PrimeNumberTheoremAnd or Rellich–Kondrachov attribution above.
+
+The separately captured support notices in
+PrimeNumberTheoremAnd/SiegelZeros/NOTICE.md remain included. They are additional
+captured notices, not a claimed NOTICE file from the pinned PNT distribution.
+
+Lean and Mathlib, and the other packages in lake-manifest.json, are build-time
+dependencies fetched separately. Their source/cache directories and toolchain
+binaries are not included in this source archive. Retain their own licenses
+and notices if redistributing them in a different bundle.
+
+File-level origins, exact revisions, retained notices, modification records and
+hashes are in THIRD-PARTY.md and audits/attribution.json. No upstream endorsement
+is implied. Automation details are recorded in formalization.yaml.

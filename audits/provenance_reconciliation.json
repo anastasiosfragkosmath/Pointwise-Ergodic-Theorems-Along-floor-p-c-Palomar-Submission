@@ -1,0 +1,47 @@
+{
+  "generated_at_utc": "2026-10-30T22:29:22.755917+00:00",
+  "status": "reconciled",
+  "scope": "Historical source-only moduleization prototype; separate from the final built and Comparator-verified package.",
+  "finding": "The 24-byte discrepancy is exactly explained by three removed private modifiers in two files between the original verification snapshot and the later recorded prototype manifest.",
+  "files_reconstructed": 955,
+  "initial_output_bytes": 14553890,
+  "later_output_bytes": 14553866,
+  "difference_bytes": 24,
+  "source_tree_sha256": "0b2e490df55fdec98d4d2898c04fe4ae371b08bc09a95a02a62394fd384a2619",
+  "initial_output_tree_sha256": "5430541d2c9c056a1f95c2ece3a55bbf2061d01e4d494d125530d16bf966bd84",
+  "later_output_tree_sha256": "ee673e95c9735ca94ae0573da67685b6041c7b055a22b47fb6a8abaff28ac59d",
+  "tree_hash_convention": "Sort package-relative file paths; hash each UTF-8 path, NUL, lowercase file SHA256 in ASCII, then LF.",
+  "source_recovery": {
+    "matching_workspace_inputs": 954,
+    "matching_unchanged_prototype_inputs": [
+      "Solution.lean"
+    ]
+  },
+  "historical_artifacts": {
+    "verification_txt_sha256": "7a11a01e59a1b8a5390ed63bd88f287a4e2d9b66dd3315363070ec1bcd5a9502",
+    "prototype_manifest_sha256": "fc65f5ac958839adc4d2606683e02f961f64af987e0ecf9d3cf04e1816c4b42a",
+    "dry_run_sha256": "1390046aafe7f763dedf9ad1f206476329811b14c50ec903ff7223ec7706d3b7",
+    "moduleizer_sha256": "8b80196bedc7805be675a2ca4c6fd173713f232a5c46c08535416c7758f1bec6"
+  },
+  "changed_files": [
+    {
+      "path": "FractionalPrimes/Literature/Polynomial/PolynomialFullResidueFromScalarTasks.lean",
+      "initial_bytes": 44854,
+      "later_bytes": 44846,
+      "bytes_removed": 8,
+      "initial_sha256": "c2f3d4987f5770c7d6f4683026c017b59058b2e64d777ef3832bd84c71b1760c",
+      "later_sha256": "a6577de7cddabf78f865913b3022f99918d4f4a8facc8a2f1335b4168dd590e2",
+      "explanation": "Removal of one private modifier."
+    },
+    {
+      "path": "FractionalPrimes/Literature/Reciprocal/GlobalCharacterMobius.lean",
+      "initial_bytes": 39813,
+      "later_bytes": 39797,
+      "bytes_removed": 16,
+      "initial_sha256": "a5b81ae80dbafdc908485f13d44ef61ca9e5ffb745061959721383a7c4a73021",
+      "later_sha256": "1cc821cac30257387faba8f8cb052e6dad1a010d68d75648cbb2295db1700f2c",
+      "explanation": "Removal of two private modifiers."
+    }
+  ],
+  "limitations": "This explains the historical byte and tree-hash discrepancy. Mathematical and kernel verification of the current package is documented separately."
+}

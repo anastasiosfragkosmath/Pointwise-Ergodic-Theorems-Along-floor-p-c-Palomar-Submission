@@ -1,0 +1,71 @@
+{
+  "scope": "Current author-selected a.e.-only statements: local proof/source/attribution checks and actual Ubuntu sandbox Comparator passed.",
+  "passed_local_checks": true,
+  "current_sandbox_comparator": "passed",
+  "author_requested_revision": {
+    "date": "2026-10-30",
+    "prime_convergence": "Keep only the almost-everywhere conclusions in submitted Lean statements.",
+    "manuscript_scope": "The supplied corollary additionally states norm convergence; the author explicitly selected its pointwise part. The manuscript is unchanged.",
+    "readme": "Write out the averages; use Mobius little-o option 3; retain Paper and Bibliography labels.",
+    "markdown": "Use positive sigma-finite measure-preserving-system wording; remove the flagged inverse/bounded-input/finite-measure/arithmetic qualification."
+  },
+  "third_party_lean_files": 2945,
+  "all_lean_files": 3933,
+  "proof_placeholders": 0,
+  "challenge_statement_placeholders": 3,
+  "build_jobs": 12981,
+  "build_log_sha256": "1675966523c2e3dade9e35ef9417314928b2d37fe231fefa1451e289e88d0f0d",
+  "lean_source_manifest_sha256": "4192a1c99e425f6cbaa683cb60d55a6d64069b22e8d061bfd53651672bc1df9d",
+  "paper_review_axioms": {
+    "FractionalPrimes.PaperTheorems.prime_power_variation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FractionalPrimes.PaperTheorems.prime_average_convergence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FractionalPrimes.PaperTheorems.mobius_logarithmic_convergence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "historical_attribution_repair": {
+    "scope": "Earlier comment-only source annotations and license repair; original source notices remain intact.",
+    "baseline_archive_sha256": "f24596d8b0d984acdf6dd3b568113c7c5d254d92a6bb37b42ff870594eaf8bb9",
+    "registered_third_party_files": 2945
+  },
+  "historical_linux_evidence_sha256": "089f056ab58d11fff58c2feacafbe799eb3582a5b94ddf64911879518ef48dce",
+  "evidence": {
+    "audits/attribution.json": "c37ec9f07f1a1a4e56ecf0744fde889e8e5512935b6a5c727aaebbff589afaaf",
+    "audits/attribution_check.json": "a16790b3eefa80ca1a1047bd9fd936b420eff58cb500c4a9fcf87987aff6fdc0",
+    "audits/build.json": "fb0887e35adcd46721e650e06c273a4db2ead916658771667f1ba2b53040993d",
+    "audits/headline_axioms.json": "f0ef034f8544cf3a7b5b7c143d03bd8a31736abe43a32bf60c4792b16b53fef8",
+    "audits/source_tokens_challenge_allowed.json": "c1a65504a4372d1082eeaaa818ae7b946e9909222276c4172c59d74bdf27ee24",
+    "audits/source_layout.json": "fe5344b9e9531db6f5430ba304a9c30cb0b53c545113fa37964b14a1459d4a74",
+    "audits/challenge.json": "b71cca5daf9b97c45a22c794bf1de2202a9a6794f685513ca9eb551e9da8ff92",
+    "audits/final_statement_comparison.json": "519adba716ebab2c97e479be36ba8ca4fcb37275f903d8d69b16c0395a99c661",
+    "audits/challenge_approval_final.json": "9ef332e8ade8edc77e2c4e04d1ba8305d660cee2915536548ed75e996c2e673b",
+    "README.md": "bd0e83c68af2d0d7067c7c01551517aabadda126e17c8eb6b2891720804c217f",
+    "semantic-audit.md": "90cc0dce8a75bc632f781b114dd212380c15830239838d9b207236e141d69f54",
+    "verification-report.md": "4211dcf0eb53e1a6a56a59e3031cba481c691f4ca601139377e727fefae734a8",
+    "NOTICE": "3575e0e217d2a3a69d968a374c1c6961d37640042895e8b587eab8b31349f5be",
+    "THIRD-PARTY.md": "f58a51538fe1cab5e99047046906a57c461122152550a23ef159aabbdcc0595a",
+    "ACKNOWLEDGMENTS.md": "a78764b371ad42bed37769ce425b4af4b7bc531815ec3276b3a7868a6dfb34b2",
+    "CITATIONS.bib": "5dd8fbba4c49f89fe2051edaf0597b49f58db672fd252531b402e161aafc0bb6",
+    "audits/linux_comparator.json": "717bfa239ccfeaf85df7e0e0c4de8fe5c3709d85c873af316c56fa97e89fb58b",
+    "audits/linux_headline_axioms.json": "42ae7194d836c497d56f75b4de4823727fe70386b89994dfc84b4a22a3930986",
+    "audits/linux_source_layout.json": "64f110ef6e7ad67dfdace4d69db4c2066da643e78d256ab3cc10400f73edc0b6",
+    "audits/linux_challenge.json": "43d64b174ec6ca74fb021dab3f6f331aa8ca951623d744a11ae2670e3ff243d9"
+  },
+  "remaining": "Author private-repository update and review; publication/submission decisions and registry/editorial acceptance remain external.",
+  "current_linux_comparator_evidence_sha256": "717bfa239ccfeaf85df7e0e0c4de8fe5c3709d85c873af316c56fa97e89fb58b",
+  "earlier_local_comparator_attempt": {
+    "exit_code": 2,
+    "reason": "bwrap needs Linux namespaces",
+    "log_sha256": "45ad3ac4ccebc01c7f0ba72d0b6ee570bf2fbdbb5dde61f5bbeabfa524374127"
+  }
+}

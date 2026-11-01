@@ -1,0 +1,31 @@
+{
+  "scope": "Current author-selected a.e.-only statement: full local build/axiom audit and actual Ubuntu sandbox Comparator acceptance.",
+  "passed": true,
+  "jobs": 12981,
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "log_path_local": "not included in repository",
+  "log_sha256": "1675966523c2e3dade9e35ef9417314928b2d37fe231fefa1451e289e88d0f0d",
+  "lean_source_manifest_sha256": "4192a1c99e425f6cbaa683cb60d55a6d64069b22e8d061bfd53651672bc1df9d",
+  "headline_axioms_sha256": "f0ef034f8544cf3a7b5b7c143d03bd8a31736abe43a32bf60c4792b16b53fef8",
+  "paper_review_axioms": {
+    "FractionalPrimes.PaperTheorems.prime_power_variation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FractionalPrimes.PaperTheorems.prime_average_convergence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FractionalPrimes.PaperTheorems.mobius_logarithmic_convergence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "focused_build_jobs": 12978,
+  "focused_build_log_sha256": "197009d781caea86fb3b0d2838eeed20e42afd9cd28960597aa3d16929f0d9c2",
+  "current_sandbox_comparator": "passed; actual Ubuntu run, all three configured kernels",
+  "linux_comparator_evidence_sha256": "717bfa239ccfeaf85df7e0e0c4de8fe5c3709d85c873af316c56fa97e89fb58b"
+}

@@ -1,0 +1,36 @@
+{
+  "scope": "Current author-selected variational, pointwise prime-convergence and Mobius results.",
+  "proofs_complete": true,
+  "local_build_passed": true,
+  "build_jobs": 12981,
+  "build_log_sha256": "1675966523c2e3dade9e35ef9417314928b2d37fe231fefa1451e289e88d0f0d",
+  "current_lean_manifest_sha256": "4192a1c99e425f6cbaa683cb60d55a6d64069b22e8d061bfd53651672bc1df9d",
+  "paper_facing_review": {
+    "file": "FractionalPrimes/PaperTheorems.lean",
+    "sha256": "64fd035829d9b40b39f6349d8ede8783016f92d8ea04b97e1879770a9eb8155f",
+    "axioms": {
+      "FractionalPrimes.PaperTheorems.prime_power_variation": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "FractionalPrimes.PaperTheorems.prime_average_convergence": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "FractionalPrimes.PaperTheorems.mobius_logarithmic_convergence": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "attribution_checkpoint_sha256": "a74c8fff6a5242e7d4d2d6f3a44f82743dc69bd24ece1984b36cfe6899685d35",
+  "current_sandbox_comparator": "passed",
+  "historical_linux_record": "Earlier records preserved locally; current record is audits/linux_comparator.json",
+  "palomar_submission_ready": false,
+  "ready_for_author_review_and_private_commit": true,
+  "remaining": "Author private-repository update/review and any publication/submission decisions; registry/editorial acceptance remains external.",
+  "linux_comparator_evidence_sha256": "717bfa239ccfeaf85df7e0e0c4de8fe5c3709d85c873af316c56fa97e89fb58b"
+}

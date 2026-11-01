@@ -1,0 +1,24 @@
+{
+  "scope": "Canonical type comparison of the current three Solution theorem types against actual Challenge types and independently compiled statement definitions, plus ten supporting definitions. Binder/universe names normalized. Supplemental local comparison, not sandboxed Comparator or independent kernel acceptance.",
+  "passed": true,
+  "matched": 3,
+  "solution_probe_sha256": "d115510460c12af0c33f4f00974ec292eefa980309aa6f9070da0b1aad7a111b",
+  "independent_probe_sha256": "d115510460c12af0c33f4f00974ec292eefa980309aa6f9070da0b1aad7a111b",
+  "actual_challenge_probe_sha256": "d115510460c12af0c33f4f00974ec292eefa980309aa6f9070da0b1aad7a111b",
+  "supporting_definitions_matched": 10,
+  "supporting_definition_names": [
+    "FractionalPrimes.floorTime",
+    "FractionalPrimes.Final.System",
+    "FractionalPrimes.Final.System.shift",
+    "FractionalPrimes.Final.weightedAverage",
+    "FractionalPrimes.Final.vonMangoldtAverage",
+    "FractionalPrimes.Final.mobiusAverage",
+    "FractionalPrimes.Final.logWeightedMobiusAverage",
+    "FractionalPrimes.Final.PrimeVariationStatement",
+    "FractionalPrimes.Final.primeAverage",
+    "FractionalPrimes.Final.enumeratedPrimeAverage"
+  ],
+  "supporting_solution_values_sha256": "560edc388ce415f06a80dc48fd94caafeac201728470e2a3505479fc36d074bc",
+  "supporting_independent_values_sha256": "560edc388ce415f06a80dc48fd94caafeac201728470e2a3505479fc36d074bc",
+  "statement_revision": "Author-requested almost-everywhere-only prime convergence."
+}
