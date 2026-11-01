@@ -54,3 +54,9 @@ Retain the complete log, immediate exit status, source commit identifier, and to
 - `FractionalPrimes.Final.Palomar.primePowerVariation`
 - `FractionalPrimes.Final.Palomar.primeAverageConvergence`
 - `FractionalPrimes.Final.Palomar.mobiusAverageTendsToZero`
+
+## Statement-file cleanup verification
+
+On 2026-11-01, unused invertible-system definitions were removed from Challenge.lean and FinalChallengeStatements.lean. The three compared theorem statements and every retained supporting definition are unchanged. The full local `lake build` passed 12,981 jobs; source-policy, module-layout and Challenge-import checks passed. The cleaned Challenge has 166 lines and 6,337 bytes. See `audits/challenge_cleanup.json` for the checked snapshot.
+
+The Ubuntu independent-kernel evidence above records the preceding Challenge file. A fresh sandbox Comparator run of the cleaned file has not yet been performed.

@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-01",
+  "scope": "Removal of unused invertible-system declarations from the two statement files.",
+  "previous_commit": "3aa105af38fd738ddf14db8c4078700de4663139",
+  "compared_statement_text_unchanged": true,
+  "retained_supporting_definitions_unchanged": true,
+  "full_lake_build": {
+    "passed": true,
+    "jobs": 12981
+  },
+  "source_scan": {
+    "passed": true,
+    "source_count": 3933,
+    "sha256_manifest": "24f7a8b8db87d8202b5f038302500f64b401b5f2cf0927b478cb392ebaf0c1f9",
+    "challenge_placeholder_count": 3
+  },
+  "layout_passed": true,
+  "challenge_import_audit": {
+    "passed": true,
+    "challenge_bytes": 6337,
+    "challenge_lines": 166,
+    "graph_sha256": "6d46a7aeae30c5359218f934551b376d3df0f3d44f8000b9f8afbfcda8edce5f"
+  },
+  "axioms": {
+    "FractionalPrimes.Final.primePowerVariation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FractionalPrimes.Final.primeAverageConvergenceWithEnumeration": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FractionalPrimes.Final.mobiusLogRate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FractionalPrimes.Final.Palomar.primePowerVariation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FractionalPrimes.Final.Palomar.primeAverageConvergence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FractionalPrimes.Final.Palomar.mobiusAverageTendsToZero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "files": {
+    "Challenge.lean": "b99baf8751ebabf401a4a21f11d338055836a09a4a43c513383152a20e496285",
+    "FinalChallengeStatements.lean": "34f2a0f8590cb8f558044474f7b8f9bca076b7c4e1ffc8dd49d21fe58715565d",
+    "scripts/audit_sources.py": "4a7b6d23c8f7f6ac802ed05f38a9610e41dca81ad4f5443da25c142a05f0a3af",
+    "audits/challenge_approval_final.json": "15259425a2e74ebe4bbea349b8cd0b10ac02cb961a135aa33188749bc79a87da"
+  },
+  "sandbox_comparator": "Pending for cleaned Challenge. Historical Ubuntu evidence retains its original snapshot binding.",
+  "next_step": "Run scripts/verify-comparator.sh under Linux for the cleaned Challenge; refresh whole-repository snapshot inventories separately."
+}

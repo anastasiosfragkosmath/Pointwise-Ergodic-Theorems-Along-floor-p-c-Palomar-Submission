@@ -53,11 +53,12 @@ automation:
     axioms. Agent-suggested proofs count only after Lean checking.
 status:
   scope: >-
-    The current a.e.-only statements and proofs passed the full local Lean
-    build, nine standard-axiom checks, and actual Ubuntu sandbox Comparator
-    with Con-ron, NanoDa and Lean's default kernel. Exactly three independent
-    Challenge-only placeholders are author-approved. Registry/editorial
-    acceptance is not claimed.
+    The cleaned statement files passed the full local Lean build and source,
+    layout, Challenge-import and standard-axiom checks. The three theorem
+    statements are unchanged. The preceding Challenge snapshot passed Ubuntu
+    sandbox Comparator with Con-ron, NanoDa and Lean's default kernel; a fresh
+    Comparator run of the cleaned Challenge is pending. Exactly three
+    Challenge-only placeholders are author-approved.
   sorry_count: 3
   sorry_in_definitions: 0
   axioms:
@@ -112,14 +113,14 @@ alignment:
     lean: FractionalPrimes.Final.Palomar.primePowerVariation
     module: FinalSolution.lean
     checked_core: FractionalPrimes.Final.primePowerVariation
-    status: proved-and-axiom-audited; ae-only-linux-sandbox-comparator-passed
+    status: proved-and-axiom-audited; prior-ae-only-linux-comparator-passed; cleaned-challenge-local-build-passed
   - source: Corollary cor:prime-convergence
     lean: FractionalPrimes.Final.Palomar.primeAverageConvergence
     module: FinalSolution.lean
     checked_core: FractionalPrimes.Final.primeAverageConvergenceWithEnumeration
-    status: proved-and-axiom-audited; ae-only-linux-sandbox-comparator-passed
+    status: proved-and-axiom-audited; prior-ae-only-linux-comparator-passed; cleaned-challenge-local-build-passed
   - source: Theorem t:mobius-convergence
     lean: FractionalPrimes.Final.Palomar.mobiusAverageTendsToZero
     module: FinalSolution.lean
     checked_core: FractionalPrimes.Final.mobiusLogRate
-    status: proved-and-axiom-audited; ae-only-linux-sandbox-comparator-passed
+    status: proved-and-axiom-audited; prior-ae-only-linux-comparator-passed; cleaned-challenge-local-build-passed

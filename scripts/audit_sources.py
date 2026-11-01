@@ -17,7 +17,7 @@ import sys
 from lean_source_mask import AuditError, FORBIDDEN_PATTERNS, mask_comments_strings_and_quoted_names
 
 ROOT = Path(__file__).resolve().parent.parent
-APPROVED_CHALLENGE_SHA256 = "f2b725bc81660109f76c630f38b4327c77c3dde469a93ac09a5c6c8548b5c5f3"
+APPROVED_CHALLENGE_SHA256 = "b99baf8751ebabf401a4a21f11d338055836a09a4a43c513383152a20e496285"
 # Exact known occurrences: these are bound variables starting continuation lines,
 # not declaration commands. Require both the path and the actual line text.
 TERM_CONSTANTS = {

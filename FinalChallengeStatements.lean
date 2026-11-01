@@ -40,64 +40,14 @@ def floorPower (c : ℝ) (n : ℕ) : ℤ := ⌊Real.rpow (n : ℝ) c⌋
 
 def floorTime (c : ℝ) (n : ℕ) : ℕ := (floorPower c n).toNat
 
-/-- An invertible sigma-finite measure-preserving system. -/
-structure InvertibleSystem (X : Type*) [MeasurableSpace X] where
-  μ : Measure X
-  sigmaFinite : SigmaFinite μ
-  T : X ≃ᵐ X
-  preserves : MeasurePreserving T μ μ
-
-namespace InvertibleSystem
-
-/-- The integer iterate of the transformation. -/
-def iterate {X : Type*} [MeasurableSpace X] (S : InvertibleSystem X)
-    (n : ℤ) : X → X :=
-  fun x => (S.T.toEquiv ^ n) x
-
-/-- Translate an observable along an integer iterate. -/
-def shift {X : Type*} [MeasurableSpace X] (S : InvertibleSystem X)
-    (n : ℤ) (f : X → ℂ) : X → ℂ :=
-  fun x => f (S.iterate n x)
-
-end InvertibleSystem
-
 /-- The arithmetic weights are Mathlib's von Mangoldt and Möbius functions. -/
 def vonMangoldtWeight (n : ℕ) : ℝ := ArithmeticFunction.vonMangoldt n
 def mobiusWeight (n : ℕ) : ℤ := ArithmeticFunction.moebius n
-
-/-- A finite average over `[1,N]`, normalized by `N`. -/
-def weightedAverage {X : Type*} [MeasurableSpace X] (S : InvertibleSystem X)
-    (c : ℝ) (w : ℕ → ℂ) (f : X → ℂ) (N : Scale) : X → ℂ :=
-  fun x => (N.1 : ℂ)⁻¹ * ∑ n ∈ Finset.Icc 1 N.1,
-    w n * f (S.iterate (floorPower c n) x)
-
-/-- The paper's von Mangoldt average `A_N`. -/
-def vonMangoldtAverage {X : Type*} [MeasurableSpace X]
-    (S : InvertibleSystem X) (c : ℝ) (f : X → ℂ) (N : Scale) : X → ℂ :=
-  weightedAverage S c (fun n => (vonMangoldtWeight n : ℂ)) f N
-
-/-- The paper's Möbius average `M_N`. -/
-def mobiusAverage {X : Type*} [MeasurableSpace X]
-    (S : InvertibleSystem X) (c : ℝ) (f : X → ℂ) (N : Scale) : X → ℂ :=
-  weightedAverage S c (fun n => (mobiusWeight n : ℂ)) f N
-
-/-- The prime average `P_N`, for `N≥2`. -/
-def primeAverage {X : Type*} [MeasurableSpace X]
-    (S : InvertibleSystem X) (c : ℝ) (f : X → ℂ)
-    (N : ℕ) (_hN : 2 ≤ N) : X → ℂ :=
-  (Nat.primeCounting N : ℂ)⁻¹ • fun x =>
-    ∑ p ∈ (Finset.Icc 1 N).filter Nat.Prime,
-      f (S.iterate (floorPower c p) x)
 
 /-- The first-`J`-prime average; Mathlib's prime enumeration starts at zero. -/
 def enumeratedPrimeMean {E : Type*} [AddCommMonoid E] [Module ℝ E]
     (g : ℕ → E) (J : ℕ) : E :=
   (J : ℝ)⁻¹ • ∑ j ∈ Finset.range J, g (Nat.nth Nat.Prime j)
-
-/-- The first-`J`-prime orbit average. -/
-def enumeratedPrimeAverage {X : Type*} [MeasurableSpace X]
-    (S : InvertibleSystem X) (c : ℝ) (f : X → ℂ) (J : Scale) : X → ℂ :=
-  enumeratedPrimeMean (fun n => S.shift (floorPower c n) f) J.val
 
 /-- The exact domain of the paper's cutoff prime averages. -/
 abbrev AdmissiblePrimeCutoff := {N : ℕ // 2 ≤ N}
@@ -127,21 +77,6 @@ structure VariationParameters where
   one_lt_p : 1 < p
   r : ℝ
   two_lt_r : 2 < r
-
-/-- The bound on one system with a specified finite constant. -/
-def PrimePowerVariationBound {X : Type*} [MeasurableSpace X]
-    (C : ℝ≥0) (S : InvertibleSystem X) (q : VariationParameters) : Prop :=
-  ∀ f : X → ℂ, MemLp f (ENNReal.ofReal q.p) S.μ →
-    eLpNorm (rVariationFun q.r
-        (vonMangoldtAverage S q.exponent.value f))
-        (ENNReal.ofReal q.p) S.μ ≤
-      (C : ℝ≥0∞) * eLpNorm f (ENNReal.ofReal q.p) S.μ
-
-/-- A single positive constant works on every system. -/
-def PrimePowerVariationStatement (q : VariationParameters) : Prop :=
-  ∃ C : ℝ≥0, 0 < C ∧
-    ∀ {X : Type*} [MeasurableSpace X] (S : InvertibleSystem X),
-      PrimePowerVariationBound C S q
 
 namespace Final
 universe u
