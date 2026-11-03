@@ -12,7 +12,7 @@ Current evidence is recorded in `audits/build.json`, `audits/headline_axioms.jso
 
 ## Independent-kernel verification
 
-On 2026-10-31, the pre-cleanup a.e.-only Challenge/Solution snapshot passed sandboxed Comparator in the author's Ubuntu ARM64 VM:
+On 2026-10-31, the pre-cleanup a.e. Challenge/Solution snapshot passed sandboxed Comparator in the author's Ubuntu ARM64 VM:
 
 - Con-ron accepted 142443 declarations with `--verified`.
 - NanoDa accepted the solution.
