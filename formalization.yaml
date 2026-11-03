@@ -24,6 +24,44 @@ sources:
   note: 'Author-supplied authoritative final manuscript; repository TeX copies have normalized indentation: source-paper/fractionalpowersofprimesfinal.tex;
     accompanying bibliography source-paper/fractionalprimesbib.bib.'
   author_endorsement: participated
+related_formalizations:
+- id: https://github.com/openai/math
+  relationship: adapts
+  note: >-
+    Bundles and adapts 2,924 number-theory Lean files from commit
+    adc7f1241b42e322a6451854ab7e4b4c146bf78a, including the Dirichlet-L
+    infrastructure used by the arithmetic proofs. Module-system, compatibility,
+    visibility and integration changes are recorded in THIRD-PARTY.md and the
+    provenance audits; this repository does not claim authorship of that code.
+- id: https://github.com/AlexKontorovich/PrimeNumberTheoremAnd
+  relationship: adapts
+  note: >-
+    Includes four Lean files from commit
+    c39a751132c88b6e8080b74c74023fd95b3d8be0 in the bundled arithmetic
+    source closure, with module-system and compatibility adaptations.
+    Original credits and license notices are retained.
+- id: https://github.com/abenenson/rellich-kondrachov
+  relationship: adapts
+  note: >-
+    Includes fifteen Lean files from commit
+    70f85d4c1bf99c6e7d61e8be4daa6f3664d08d23 in the bundled source
+    closure, with module-system and compatibility adaptations.
+    Original credits and license notices are retained.
+- id: https://github.com/roos-j/lean-spherical
+  relationship: adapts
+  note: >-
+    Adapts Schur-test and real-line translation material from commit
+    f0dde64dcef87118c1d1dc9253e039da8f3f0482 in
+    FractionalPrimes/Literature/JSW/SchurKernel.lean and
+    FractionalPrimes/Literature/JSW/SmoothL1Translation.lean.
+    Original author, license and generation notices are retained.
+- id: https://github.com/dbsanfte/RiemannGaussian
+  relationship: other
+  note: >-
+    Commit 07968f5ea0bff8caf39973599280e6321211c682 identifies a historical
+    source-preparation vendor snapshot, rather than a claim that this submission
+    formalizes that project's results. The underlying bundled developments are
+    identified separately above; see THIRD-PARTY.md and audits/provenance.json.
 classification:
   arxiv:
   - math.DS
@@ -53,11 +91,14 @@ automation:
     axioms. Agent-suggested proofs count only after Lean checking.
 status:
   scope: >-
-    The cleaned statement files passed the full local Lean build and source,
-    layout, Challenge-import and standard-axiom checks. The three theorem
-    statements are unchanged. The preceding Challenge snapshot passed Ubuntu
-    sandbox Comparator with Con-ron, NanoDa and Lean's default kernel; a fresh
-    Comparator run of the cleaned Challenge is pending. Exactly three
+    The unused-definition cleanup passed the full local Lean build and source,
+    layout, Challenge-import and standard-axiom checks, and GitHub lake build
+    passed at commit a96cc1d34108fe4dab121521ff2ecb766481e4d9. The subsequent
+    documentation changes preserve all Lean code and the three theorem
+    statements and passed the full local build and source, layout, import and
+    standard-axiom checks; see audits/policy_documentation_checkpoint.json. The pre-cleanup a.e.-only snapshot passed Ubuntu sandbox
+    Comparator with Con-ron, NanoDa and Lean's default kernel; a fresh
+    Comparator run of the current Challenge remains pending. Exactly three
     Challenge-only placeholders are author-approved.
   sorry_count: 3
   sorry_in_definitions: 0
@@ -91,12 +132,17 @@ review:
   status: self-assessed
   reviewers: []
   notes: >-
-    The complete a.e.-only Ubuntu Comparator log and transferred reports were
-    inspected. All 3933 Lean-source hashes and recorded configuration hashes
-    match the locally checked source package. All three configured kernels
-    accepted; the author reported immediate pipeline exit status zero.
-    See verification-report.md and audits/linux_comparator.json.
-    Registry/editorial review remains external.
+    The complete Ubuntu Comparator log and transferred reports for the
+    pre-cleanup a.e.-only snapshot were inspected. Its 3933 Lean-source hashes
+    and configuration hashes matched the corresponding local package, not the
+    later cleaned or documented Challenge. All three configured kernels accepted
+    that historical snapshot; the author reported immediate pipeline exit status
+    zero. GitHub lake build passed for commit
+    a96cc1d34108fe4dab121521ff2ecb766481e4d9 after the unused-definition
+    cleanup. The subsequent Challenge documentation changes preserve all Lean
+    code. Fresh Comparator verification remains pending for the current files.
+    See verification-report.md, audits/linux_comparator.json and
+    audits/challenge_cleanup.json. Registry/editorial review remains external.
 fidelity:
   divergences: >-
     Complex observables are explicit. Positive averaging scales start at N=1,

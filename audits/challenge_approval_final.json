@@ -1,9 +1,10 @@
 {
   "scope": "Exactly three statement-only Challenge placeholders for the revised manuscript; no placeholders in Solution or revised proofs.",
   "authorization": "User explicitly approved in this chat: Yes\u2014allow exactly three Challenge-only placeholders; none in proofs.",
-  "challenge_sha256": "b99baf8751ebabf401a4a21f11d338055836a09a4a43c513383152a20e496285",
+  "challenge_sha256": "a69d07c3043ecbe8b5ff55b7b60f079ad513f1ef69ca43239b7de25699d7e4ee",
   "placeholder_count": 3,
-  "previous_challenge_sha256": "f2b725bc81660109f76c630f38b4327c77c3dde469a93ac09a5c6c8548b5c5f3",
+  "previous_challenge_sha256": "b99baf8751ebabf401a4a21f11d338055836a09a4a43c513383152a20e496285",
   "statement_scope_revision": "Author explicitly requested a.e.-only prime convergence in this chat on 2026-10-30; the same three previously approved Challenge-only placeholders remain, with no additional placeholders.",
-  "cleanup": "Removed unused invertible-system definitions; compared theorem text and all definitions it uses are unchanged. The same three authorized statement placeholders remain."
+  "cleanup": "Removed unused invertible-system definitions; compared theorem text and all definitions it uses are unchanged. The same three authorized statement placeholders remain.",
+  "documentation_update": "2026-11-03: explanatory comments and docstrings only; all non-comment Lean code unchanged and exactly the same three previously authorized placeholders."
 }

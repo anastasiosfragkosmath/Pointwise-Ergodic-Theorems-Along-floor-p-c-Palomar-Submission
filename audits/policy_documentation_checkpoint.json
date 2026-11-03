@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-03",
+  "base_commit": "a96cc1d34108fe4dab121521ff2ecb766481e4d9",
+  "scope": "Related-formalisation metadata, exact verification snapshot wording, and statement-definition documentation.",
+  "non_comment_lean_code_unchanged": true,
+  "full_lake_build": {
+    "passed": true,
+    "jobs": 12981
+  },
+  "source_scan": {
+    "passed": true,
+    "source_count": 3933,
+    "sha256_manifest": "666d9fd66277ac93d1620a563666ea3589977b93d5205b2e3066610bd56f637b",
+    "challenge_placeholder_count": 3
+  },
+  "layout_passed": true,
+  "challenge_import_audit": {
+    "passed": true,
+    "lines": 183,
+    "bytes": 7639,
+    "modules": 4351
+  },
+  "metadata": {
+    "yaml_parsed": true,
+    "copies_agree": true,
+    "related_formalizations": 5
+  },
+  "axioms": {
+    "FractionalPrimes.Final.primePowerVariation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FractionalPrimes.Final.primeAverageConvergenceWithEnumeration": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FractionalPrimes.Final.mobiusLogRate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FractionalPrimes.Final.Palomar.primePowerVariation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FractionalPrimes.Final.Palomar.primeAverageConvergence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "FractionalPrimes.Final.Palomar.mobiusAverageTendsToZero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "files": {
+    "Challenge.lean": "a69d07c3043ecbe8b5ff55b7b60f079ad513f1ef69ca43239b7de25699d7e4ee",
+    "FinalChallengeStatements.lean": "9bd59a58d009b6581d8dd259f1a4ecfd4adf3fca082e5073001d49026910c918",
+    "formalization.yaml": "95c0cbda10bb090585c8f1eaa045d76d3d08e2aab22df34dc00ac3a9eb899ab0",
+    "formalization-final.yaml": "95c0cbda10bb090585c8f1eaa045d76d3d08e2aab22df34dc00ac3a9eb899ab0",
+    "verification-report.md": "fca530112396aa2539ba86b5ca74e9d65519a785e50b6ba6a314ae3ae15f9679",
+    "semantic-audit.md": "89c6d961215e7fb5494480c5ac75983e59025691b1c08936818ab2e355762aa5",
+    "scripts/audit_sources.py": "28135f98822bcc9e3f9a78d995dd4482d383e7cbf7588ce6f715d17619e53ce8",
+    "audits/challenge_approval_final.json": "12680ccb5aff01c41fc3813eb5f6eea873d4f36139bff9353066cb8dcbc77ed8"
+  },
+  "sandbox_comparator": "Pending for current documented statement files; historical Ubuntu acceptance applies only to its recorded pre-cleanup snapshot.",
+  "historical_github_build": {
+    "commit": "a96cc1d34108fe4dab121521ff2ecb766481e4d9",
+    "run_id": 41359370486,
+    "conclusion": "success"
+  },
+  "next_step": "Run scripts/verify-comparator.sh under Linux for the exact submitted snapshot."
+}

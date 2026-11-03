@@ -71,7 +71,7 @@ python3 scripts/audit_attribution.py
 
 The source-policy checks prohibit placeholders and proof-bypass mechanisms in the completed proof sources. The independent `Challenge.lean` contains the three author-approved statement-only placeholders. Its statements are compared with the proofs exported through `Solution.lean`, using `comparator.json`.
 
-The [verification report](verification-report.md) records the local checks and the exact scope of the earlier independent-kernel verification. The a.e.-only Challenge/Solution pair passed sandboxed Comparator in Ubuntu with Con-ron, NanoDa, and Lean’s default kernel.
+The [verification report](verification-report.md) records the local checks and the exact scope of the earlier independent-kernel verification. The pre-cleanup a.e.-only snapshot passed sandboxed Comparator in Ubuntu with Con-ron, NanoDa, and Lean’s default kernel. The later cleanup passed the GitHub Lean build; a fresh Comparator run of the current statement files remains pending.
 
 ## Navigation
 

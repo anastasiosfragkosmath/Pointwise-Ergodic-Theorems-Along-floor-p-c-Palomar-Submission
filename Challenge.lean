@@ -10,7 +10,7 @@ public import Mathlib.NumberTheory.PrimeCounting
 # Fractional powers of primes: statements of the main results
 
 These definitions spell out the three main claims of
-the baseline manuscript. The Solution supplies the proofs. The revised Challenge contains exactly three author-approved statement-only
+the supplied final manuscript. The Solution supplies the proofs. The revised Challenge contains exactly three author-approved statement-only
 placeholders. FinalSolution supplies all proved versions with standard axioms only.
 -/
 
@@ -38,6 +38,8 @@ structure FractionalExponent where
 /-- The time assigned to the integer `n`. -/
 def floorPower (c : ℝ) (n : ℕ) : ℤ := ⌊Real.rpow (n : ℝ) c⌋
 
+/-- The nonnegative integer floor of `n^c`, used as a forward iterate of the map.
+For the positive indices and exponents in the theorems, it equals `floorPower c n`. -/
 def floorTime (c : ℝ) (n : ℕ) : ℕ := (floorPower c n).toNat
 
 /-- The arithmetic weights are Mathlib's von Mangoldt and Möbius functions. -/
@@ -80,6 +82,7 @@ structure VariationParameters where
 
 namespace Final
 universe u
+/-- A sigma-finite measure space equipped with a measurable measure-preserving map. -/
 structure System (X : Type*) [MeasurableSpace X] where
   μ : Measure X
   sigmaFinite : SigmaFinite μ
@@ -88,27 +91,37 @@ structure System (X : Type*) [MeasurableSpace X] where
 
 namespace System
 variable {X : Type*} [MeasurableSpace X]
+/-- Compose the observable with the `n`-fold forward iterate of the system map. -/
 def shift (S : System X) (n : ℕ) (f : X → ℂ) : X → ℂ :=
   f ∘ S.T^[n]
 
 end System
+/-- The weighted orbit average `N⁻¹ ∑ n ∈ [1,N], w(n) f(T^[⌊n^c⌋] x)`.
+The cutoff `N` is a positive integer. -/
 def weightedAverage {X : Type*} [MeasurableSpace X] (S : System X) (c : ℝ)
     (w : ℕ → ℂ) (f : X → ℂ) (N : Scale) : X → ℂ :=
   fun x => (N.1 : ℂ)⁻¹ * ∑ n ∈ Finset.Icc 1 N.1,
     w n * S.shift (floorTime c n) f x
 
+/-- The orbit average over `[1,N]` with von Mangoldt weights and normalization `1/N`. -/
 def vonMangoldtAverage {X : Type*} [MeasurableSpace X] (S : System X) (c : ℝ)
     (f : X → ℂ) (N : Scale) : X → ℂ :=
   weightedAverage S c (fun n => (vonMangoldtWeight n : ℂ)) f N
 
+/-- The orbit average over `[1,N]` with Möbius weights and normalization `1/N`. -/
 def mobiusAverage {X : Type*} [MeasurableSpace X] (S : System X) (c : ℝ)
     (f : X → ℂ) (N : Scale) : X → ℂ :=
   weightedAverage S c (fun n => (mobiusWeight n : ℂ)) f N
 
+/-- Multiply the Möbius orbit average by `(log N)^A`.
+Its almost-everywhere limit zero expresses decay `o((log N)^(-A))`. -/
 def logWeightedMobiusAverage {X : Type*} [MeasurableSpace X]
     (S : System X) (c A : ℝ) (f : X → ℂ) (N : Scale) : X → ℂ :=
   (Real.rpow (Real.log (N.1 : ℝ)) A) • mobiusAverage S c f N
 
+/-- A homogeneous `r`-variation bound in `L^p`, uniform over all sigma-finite
+measure-preserving systems and all `L^p` observables. The finite positive constant
+is chosen before the system and observable and may depend only on `q`. -/
 def PrimeVariationStatement (q : VariationParameters) : Prop :=
   ∃ C : ℝ≥0, 0 < C ∧
     ∀ {X : Type u} [MeasurableSpace X] (S : System X) (f : X → ℂ),
@@ -116,6 +129,8 @@ def PrimeVariationStatement (q : VariationParameters) : Prop :=
       eLpNorm (rVariationFun q.r (vonMangoldtAverage S q.exponent.value f))
         (ENNReal.ofReal q.p) S.μ ≤
         (C : ℝ≥0∞) * eLpNorm f (ENNReal.ofReal q.p) S.μ
+/-- The average of `f(T^[⌊n^c⌋] x)` over primes `n ≤ N`, normalized by `π(N)`.
+The convergence theorem restricts this family to cutoffs `N ≥ 2`. -/
 def primeAverage {X : Type*} [MeasurableSpace X] (S : System X) (c : ℝ)
     (f : X → ℂ) (N : ℕ) : X → ℂ :=
   (Nat.primeCounting N : ℂ)⁻¹ • fun x =>
@@ -125,6 +140,8 @@ def primeAverage {X : Type*} [MeasurableSpace X] (S : System X) (c : ℝ)
 
 section
 attribute [local instance 2000] NormedSpace.complexToReal NormedField.toNormedSpace
+/-- The average over exactly the first `J` primes, with `J > 0`.
+The prime enumeration is zero-based, so its first term uses the prime `2`. -/
 def enumeratedPrimeAverage {X : Type*} [MeasurableSpace X]
     (S : System X) (c : ℝ) (f : X → ℂ) (J : Scale) : X → ℂ :=
   enumeratedPrimeMean (fun n => S.shift (floorTime c n) f) J.val
