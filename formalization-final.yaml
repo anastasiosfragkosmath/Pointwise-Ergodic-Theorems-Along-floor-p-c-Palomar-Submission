@@ -5,7 +5,7 @@ project:
     Lean 4 formalization of the variational estimate, common pointwise limit
     for von Mangoldt and prime averages, and logarithmic Mobius cancellation
     in Pointwise Ergodic Theorems Along $\lfloor p^c\rfloor$ for Every $c>1$. The author selected
-    the a.e.-only conclusion for the submitted prime-convergence statement.
+    the a.e. conclusion for the submitted prime-convergence statement.
     All results are stated for sigma-finite measure-preserving systems.
   authors:
   - Anastasios Fragkos
@@ -96,7 +96,7 @@ status:
     passed at commit a96cc1d34108fe4dab121521ff2ecb766481e4d9. The subsequent
     documentation changes preserve all Lean code and the three theorem
     statements and passed the full local build and source, layout, import and
-    standard-axiom checks; see audits/policy_documentation_checkpoint.json. The pre-cleanup a.e.-only snapshot passed Ubuntu sandbox
+    standard-axiom checks; see audits/policy_documentation_checkpoint.json. The pre-cleanup a.e. snapshot passed Ubuntu sandbox
     Comparator with Con-ron, NanoDa and Lean's default kernel; a fresh
     Comparator run of the current Challenge remains pending. Exactly three
     Challenge-only placeholders are author-approved.
@@ -133,7 +133,7 @@ review:
   reviewers: []
   notes: >-
     The complete Ubuntu Comparator log and transferred reports for the
-    pre-cleanup a.e.-only snapshot were inspected. Its 3933 Lean-source hashes
+    pre-cleanup a.e. snapshot were inspected. Its 3933 Lean-source hashes
     and configuration hashes matched the corresponding local package, not the
     later cleaned or documented Challenge. All three configured kernels accepted
     that historical snapshot; the author reported immediate pipeline exit status
@@ -148,7 +148,7 @@ fidelity:
     Complex observables are explicit. Positive averaging scales start at N=1,
     and prime normalization starts at N=2. The enumerated-prime averages have
     the same almost-everywhere limit. At the author's explicit request, the
-    submitted corollary records only its pointwise conclusion. The unchanged
+    submitted corollary records its pointwise conclusion. The unchanged
     supplied paper also states norm convergence. Norm arguments remain as
     supporting proof infrastructure. The Mobius assertion is the stated
     logarithmic almost-everywhere decay rate.
@@ -159,14 +159,14 @@ alignment:
     lean: FractionalPrimes.Final.Palomar.primePowerVariation
     module: FinalSolution.lean
     checked_core: FractionalPrimes.Final.primePowerVariation
-    status: proved-and-axiom-audited; prior-ae-only-linux-comparator-passed; cleaned-challenge-local-build-passed
+    status: proved-and-axiom-audited; prior-ae-linux-comparator-passed; cleaned-challenge-local-build-passed
   - source: Corollary cor:prime-convergence
     lean: FractionalPrimes.Final.Palomar.primeAverageConvergence
     module: FinalSolution.lean
     checked_core: FractionalPrimes.Final.primeAverageConvergenceWithEnumeration
-    status: proved-and-axiom-audited; prior-ae-only-linux-comparator-passed; cleaned-challenge-local-build-passed
+    status: proved-and-axiom-audited; prior-ae-linux-comparator-passed; cleaned-challenge-local-build-passed
   - source: Theorem t:mobius-convergence
     lean: FractionalPrimes.Final.Palomar.mobiusAverageTendsToZero
     module: FinalSolution.lean
     checked_core: FractionalPrimes.Final.mobiusLogRate
-    status: proved-and-axiom-audited; prior-ae-only-linux-comparator-passed; cleaned-challenge-local-build-passed
+    status: proved-and-axiom-audited; prior-ae-linux-comparator-passed; cleaned-challenge-local-build-passed
